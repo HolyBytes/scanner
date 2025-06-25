@@ -550,7 +550,6 @@ Submit enhancement requests dengan detail:
 ### Contact Information
 - **GitHub**: [@HolyBytes](https://github.com/HolyBytes)
 - **Support**: [https://saweria.co/HolyBytes](https://saweria.co/HolyBytes)
-- **Email**: Gunakan GitHub Issues untuk komunikasi publik
 
 ### Community
 - Join discussions dalam GitHub repository
