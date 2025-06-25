@@ -4,493 +4,568 @@
 [![Python Version](https://img.shields.io/badge/python-3.6%2B-blue.svg)](https://www.python.org/downloads/)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS%20%7C%20Termux-lightgrey.svg)](https://github.com/HolyBytes/scanner)
 
-**Alat pengujian keamanan web profesional** untuk identifikasi kerentanan keamanan dengan metodologi penetration testing yang komprehensif.
+**Scanner Kerentanan Website Profesional** - Alat canggih untuk mengidentifikasi berbagai jenis kerentanan keamanan pada website dengan akurasi tinggi menggunakan metode penetration testing yang sistematis.
 
 ---
 
-## ⚠️ DISCLAIMER PENTING
+## ⚠️ PERINGATAN PENTING
 
-**PERINGATAN HUKUM**: Tool ini dikembangkan khusus untuk **authorized penetration testing** dan **security assessment**. Penggunaan tanpa izin tertulis dari pemilik sistem merupakan pelanggaran hukum yang serius.
+**DISCLAIMER HUKUM**: Tool ini dikembangkan khusus untuk **authorized penetration testing** dan **educational purposes**. Penggunaan tanpa izin tertulis dari pemilik sistem merupakan pelanggaran hukum.
 
-**TANGGUNG JAWAB PENGGUNA**:
-- Anda sepenuhnya bertanggung jawab atas penggunaan tool ini
-- Dapatkan **written authorization** sebelum melakukan scanning
-- Patuhi undang-undang cybersecurity di yurisdiksi Anda
+- Dapatkan **izin tertulis** sebelum melakukan scanning
 - Developer tidak bertanggung jawab atas penyalahgunaan
+- Patuhi undang-undang cybersecurity di wilayah Anda
+- Gunakan hanya untuk testing legal dan pembelajaran keamanan
 
 ---
 
-## 🎯 OVERVIEW
+## 🔥 Fitur Unggulan
 
-Scanner ini dirancang untuk security professionals dalam melakukan comprehensive vulnerability assessment dengan menggunakan teknik advanced penetration testing. Tool ini mengintegrasikan multiple attack vectors dengan precision detection untuk mengidentifikasi critical security flaws.
+### Deteksi Kerentanan Komprehensif
+- **15+ Jenis Kerentanan**: XSS, SQL Injection, RCE, LFI, SSRF, XXE, Command Injection, Open Redirect, SSTI, CSRF, File Upload, IDOR, Header Injection, JWT, Directory Traversal
+- **100+ Payload Database**: Setiap jenis kerentanan memiliki payload ekstensif untuk testing menyeluruh
+- **Pattern Recognition**: Advanced pattern matching untuk deteksi akurat
+- **False Positive Reduction**: Algoritma cerdas untuk mengurangi hasil false positive
 
-### Keunggulan Kompetitif
+### Performa Tinggi
+- **Multi-Threading**: 1000 thread paralel untuk scanning cepat
+- **Smart Timeout**: Batas waktu 10 detik per request dengan adaptive timeout
+- **Connection Pooling**: Manajemen koneksi efisien untuk optimasi network
+- **Memory Optimization**: Penggunaan memory yang optimal untuk performa maksimal
 
-- **Enterprise-Grade Detection**: 15+ kategori kerentanan dengan 240+ payload vectors
-- **High-Performance Architecture**: Multi-threaded scanning dengan optimasi resource management
-- **Cross-Platform Compatibility**: Native support untuk Linux, Windows, macOS, dan Termux
-- **Professional Reporting**: Detailed vulnerability assessment dengan risk scoring
-- **Stealth Capabilities**: Advanced evasion techniques untuk bypassing basic security measures
+### Cross-Platform Support
+- **Universal Compatibility**: Berjalan di Termux, Linux, Windows, macOS
+- **Lightweight Design**: Requirement minimal untuk berbagai spesifikasi hardware
+- **Easy Installation**: Setup sederhana dengan dependency management
 
----
-
-## 🔬 TECHNICAL SPECIFICATIONS
-
-### Vulnerability Coverage Matrix
-
-| Kategori Kerentanan | Payload Count | Detection Method | Severity Level |
-|---------------------|---------------|------------------|----------------|
-| **Cross-Site Scripting (XSS)** | 25 | DOM Analysis, Response Pattern | High |
-| **SQL Injection** | 30 | Error-based, Boolean-based, Time-based | Critical |
-| **Remote Code Execution (RCE)** | 20 | Command Output Analysis | Critical |
-| **Local File Inclusion (LFI)** | 18 | File Content Fingerprinting | High |
-| **Server-Side Request Forgery (SSRF)** | 15 | Internal Service Probing | High |
-| **XML External Entity (XXE)** | 12 | XML Parser Exploitation | Medium |
-| **Command Injection** | 22 | System Command Response | Critical |
-| **Open Redirect** | 15 | HTTP Header Analysis | Medium |
-| **Server-Side Template Injection (SSTI)** | 18 | Template Engine Behavior | High |
-| **Cross-Site Request Forgery (CSRF)** | 15 | Token Validation Testing | Medium |
-| **Unrestricted File Upload** | 20 | MIME Type Bypass Testing | High |
-| **Insecure Direct Object Reference (IDOR)** | 15 | Access Control Testing | Medium |
-| **HTTP Header Injection** | 15 | Response Header Manipulation | Low |
-| **JWT Vulnerabilities** | 18 | Token Cryptographic Analysis | High |
-| **Directory Traversal** | 22 | Path Manipulation Testing | High |
-
-### Performance Metrics
-
-- **Concurrent Threads**: 1000 parallel execution threads
-- **Request Timeout**: 10 seconds with exponential backoff
-- **Memory Optimization**: Dynamic payload loading with garbage collection
-- **Network Efficiency**: Connection pooling dengan keep-alive support
-- **False Positive Rate**: <5% dengan advanced pattern matching
+### Professional Reporting
+- **Detailed Output**: Tampilan hasil dalam format tabel terstruktur
+- **System Monitoring**: Real-time monitoring sistem selama proses scanning
+- **Color-coded Results**: Hasil dengan color coding untuk mudah dibaca
+- **Export Capability**: Kemampuan export hasil ke berbagai format file
 
 ---
 
-## 🛠 SYSTEM REQUIREMENTS
+## 📊 Daftar Kerentanan yang Dideteksi
 
-### Minimum Requirements
+| No | Jenis Kerentanan | Jumlah Payload | Metode Deteksi | Level Risiko |
+|----|------------------|----------------|----------------|--------------|
+| 1  | Cross-Site Scripting (XSS) | 15 | Pattern Matching, DOM Analysis | High |
+| 2  | SQL Injection | 15 | Error-based, Boolean-based Detection | Critical |
+| 3  | Remote Code Execution (RCE) | 15 | Command Output Detection | Critical |
+| 4  | Local File Inclusion (LFI) | 15 | File Content Detection | High |
+| 5  | Server-Side Request Forgery (SSRF) | 15 | Internal Service Response | High |
+| 6  | XML External Entity (XXE) | 8 | XML Parser Behavior Analysis | Medium |
+| 7  | Command Injection | 15 | System Command Response | Critical |
+| 8  | Open Redirect | 15 | Header Location Analysis | Medium |
+| 9  | Server-Side Template Injection (SSTI) | 15 | Template Engine Behavior | High |
+| 10 | Cross-Site Request Forgery (CSRF) | 15 | Token Validation Check | Medium |
+| 11 | File Upload Vulnerability | 15 | File Type Verification Bypass | High |
+| 12 | Insecure Direct Object Reference (IDOR) | 15 | Access Control Testing | Medium |
+| 13 | HTTP Header Injection | 15 | Response Header Analysis | Low |
+| 14 | JWT Vulnerabilities | 15 | Token Validation Testing | High |
+
+**Total Payload**: 238+ payload combinations untuk comprehensive testing
+
+---
+
+## 📦 Persyaratan Sistem
+
+### Requirements Minimum
 ```
-- Python 3.6 atau lebih tinggi
-- RAM: 2GB minimum, 4GB recommended
-- Storage: 100MB free space
-- Network: Stable internet connection
-- OS: Windows 7+, Linux (Ubuntu 16.04+), macOS 10.12+, Android (Termux)
+Python: 3.6 atau lebih tinggi
+RAM: 1GB minimum (2GB recommended)
+Storage: 50MB free space
+Network: Koneksi internet stabil
+OS Support: Windows 7+, Linux (Ubuntu 16.04+), macOS 10.12+, Android (Termux)
 ```
 
-### Recommended Specifications
+### Dependencies yang Diperlukan
 ```
-- Python 3.8+
-- RAM: 8GB untuk optimal performance
-- CPU: Multi-core processor (4+ cores)
-- Network: High-speed connection untuk bulk scanning
-- VPN: Recommended untuk privacy dan security
+- requests: HTTP library untuk web requests
+- beautifulsoup4: HTML parsing dan analysis
+- colorama: Cross-platform colored terminal output
+- prettytable: Formatted table output
+- psutil: System dan process monitoring
+- urllib3: Advanced HTTP client library
 ```
 
 ---
 
-## 📦 INSTALLATION GUIDE
+## 🛠 Panduan Instalasi
 
-### Universal Installation (Linux/Windows/macOS)
+### Instalasi Universal (Linux/Windows/macOS)
 
-1. **Clone Repository**
+1. **Persiapan Sistem**
+   ```bash
+   # Cek versi Python
+   python --version
+   python3 --version
+   
+   # Update pip
+   pip install --upgrade pip
+   ```
+
+2. **Clone Repository**
    ```bash
    git clone https://github.com/HolyBytes/scanner.git
    cd scanner
    ```
 
-2. **Setup Virtual Environment** (Recommended)
-   ```bash
-   python -m venv scanner_env
-   source scanner_env/bin/activate  # Linux/macOS
-   # scanner_env\Scripts\activate   # Windows
-   ```
-
 3. **Install Dependencies**
    ```bash
-   pip install --upgrade pip
    pip install -r requirements.txt
    ```
 
-4. **Verify Installation**
+4. **Verifikasi Instalasi**
    ```bash
    python scanner.py --help
    ```
 
-### Termux-Specific Installation
+### Instalasi Khusus Termux (Android)
 
 ```bash
-# Update package list
+# Update package repository
 pkg update && pkg upgrade
 
-# Install core dependencies
+# Install core requirements
 pkg install python git
 
-# Clone and setup
+# Install additional packages
+pkg install libxml2 libxslt
+
+# Clone repository
 git clone https://github.com/HolyBytes/scanner.git
 cd scanner
 
 # Install Python dependencies
 pip install requests beautifulsoup4 colorama prettytable psutil urllib3
+
+# Test installation
+python scanner.py --help
 ```
 
-### Docker Installation (Advanced)
+### Manual Dependencies Installation
 
-```dockerfile
-# Create Dockerfile
-FROM python:3.9-alpine
-WORKDIR /app
-COPY requirements.txt .
-RUN pip install -r requirements.txt
-COPY . .
-ENTRYPOINT ["python", "scanner.py"]
-```
-
+Jika instalasi otomatis gagal:
 ```bash
-# Build and run
-docker build -t vuln-scanner .
-docker run --rm vuln-scanner -u https://example.com
+pip install requests
+pip install beautifulsoup4
+pip install colorama
+pip install prettytable
+pip install psutil
+pip install urllib3
 ```
 
 ---
 
-## 🚀 USAGE MANUAL
+## 🚀 Cara Penggunaan
 
-### Basic Command Structure
-
+### Format Perintah Dasar
 ```bash
-python scanner.py [OPTIONS] -u <TARGET_URL>
-python scanner.py [OPTIONS] -f <TARGET_FILE>
+python scanner.py -u <URL_TARGET>
+python scanner.py -f <FILE_TARGET_LIST>
 ```
 
-### Command Line Arguments
+### Parameter dan Options
 
-| Parameter | Description | Example |
-|-----------|-------------|---------|
-| `-u, --url` | Single target URL | `-u https://example.com` |
-| `-f, --file` | File containing target URLs | `-f targets.txt` |
-| `-t, --threads` | Number of threads (default: 1000) | `-t 500` |
-| `-o, --output` | Output file format (json/csv/txt) | `-o results.json` |
-| `--timeout` | Request timeout in seconds | `--timeout 15` |
-| `--user-agent` | Custom User-Agent string | `--user-agent "Custom Bot"` |
-| `--proxy` | Proxy server configuration | `--proxy http://127.0.0.1:8080` |
-| `--headers` | Custom HTTP headers | `--headers "X-Custom: Value"` |
-| `--verbose` | Enable verbose logging | `--verbose` |
-| `--stealth` | Enable stealth mode | `--stealth` |
+| Parameter | Deskripsi | Contoh Penggunaan |
+|-----------|-----------|-------------------|
+| `-u, --url` | URL target tunggal | `-u https://example.com` |
+| `-f, --file` | File berisi daftar URL | `-f targets.txt` |
 
-### Usage Examples
+### Contoh Penggunaan Praktis
 
-#### 1. Basic Single Target Scan
+#### 1. Scanning Website Tunggal
 ```bash
 python scanner.py -u https://testphp.vulnweb.com/
 ```
 
-#### 2. Multi-Target Scanning
+#### 2. Scanning Multiple Websites
 ```bash
-# Create targets.txt with URLs
+# Buat file targets.txt
 echo "https://example1.com" > targets.txt
 echo "https://example2.com" >> targets.txt
+echo "https://testphp.vulnweb.com/" >> targets.txt
 
+# Jalankan scanning
 python scanner.py -f targets.txt
 ```
 
-#### 3. Advanced Scanning with Custom Settings
+#### 3. Scanning dengan Target Berbeda
 ```bash
-python scanner.py -u https://example.com \
-    --threads 500 \
-    --timeout 20 \
-    --output results.json \
-    --user-agent "Mozilla/5.0 Security Scanner" \
-    --verbose
+# Target dengan parameter
+python scanner.py -u "https://example.com/search.php?q=test"
+
+# Target dengan subdomain
+python scanner.py -u "https://admin.example.com"
+
+# Target dengan port khusus
+python scanner.py -u "https://example.com:8443"
 ```
 
-#### 4. Stealth Mode Scanning
-```bash
-python scanner.py -u https://example.com \
-    --stealth \
-    --threads 100 \
-    --proxy http://127.0.0.1:9050
-```
+### Format File Target
 
-#### 5. Corporate Network Scanning
-```bash
-python scanner.py -f internal_hosts.txt \
-    --threads 50 \
-    --timeout 30 \
-    --headers "X-Forwarded-For: 192.168.1.100"
+File target harus berisi satu URL per baris:
+```
+https://example1.com
+https://example2.com/admin
+https://subdomain.example3.com
+http://example4.com:8080
 ```
 
 ---
 
-## 🔍 SCANNING METHODOLOGY
+## 🧠 Metodologi Scanning
 
-### Phase 1: Reconnaissance
-- Target URL validation dan accessibility check
-- Technology stack fingerprinting
-- Directory enumeration dan hidden endpoint discovery
-- Parameter identification untuk injection testing
+### Phase 1: Initialization
+1. **System Check**: Verifikasi spesifikasi hardware dan network
+2. **Target Validation**: Validasi URL dan accessibility check
+3. **Payload Loading**: Loading database payload untuk setiap jenis kerentanan
+4. **Thread Preparation**: Setup multi-threading environment
 
-### Phase 2: Vulnerability Detection
-- Automated payload injection across identified parameters
-- Response analysis menggunakan pattern matching algorithms
-- Error-based detection untuk database interactions
-- Time-based detection untuk blind vulnerabilities
+### Phase 2: Reconnaissance
+1. **Technology Detection**: Identifikasi teknologi yang digunakan target
+2. **Parameter Discovery**: Pencarian parameter yang dapat diinjeksi
+3. **Endpoint Enumeration**: Mapping available endpoints
+4. **Response Analysis**: Analisis initial response patterns
 
-### Phase 3: Exploitation Verification
-- Proof-of-concept payload execution
-- Impact assessment dan risk scoring
-- False positive elimination
-- Vulnerability chaining analysis
+### Phase 3: Vulnerability Testing
+1. **Payload Injection**: Sistematis injection payload ke parameter target
+2. **Response Monitoring**: Real-time monitoring response dari server
+3. **Pattern Matching**: Analisis response menggunakan signature detection
+4. **Confirmation Testing**: Verifikasi kerentanan yang terdeteksi
 
-### Phase 4: Reporting
-- Comprehensive vulnerability report generation
-- Risk prioritization berdasarkan CVSS scoring
-- Remediation recommendations
-- Executive summary untuk management
+### Phase 4: Result Processing
+1. **Data Aggregation**: Pengumpulan dan strukturing hasil scan
+2. **Risk Assessment**: Penilaian tingkat risiko setiap kerentanan
+3. **Report Generation**: Pembuatan laporan comprehensive
+4. **System Cleanup**: Cleanup resources dan memory management
 
 ---
 
-## 📊 OUTPUT FORMATS
+## 📈 Arsitektur dan Cara Kerja
 
-### Console Output
-Real-time scanning progress dengan color-coded severity levels:
-- 🔴 **CRITICAL**: RCE, SQLi dengan data exposure
-- 🟠 **HIGH**: XSS, LFI, privilege escalation
-- 🟡 **MEDIUM**: CSRF, open redirect, information disclosure
-- 🟢 **LOW**: Header injection, minor misconfigurations
-
-### JSON Report Format
-```json
-{
-  "scan_metadata": {
-    "target": "https://example.com",
-    "scan_time": "2025-06-25T10:30:00Z",
-    "duration": "00:05:23",
-    "total_requests": 1500
-  },
-  "vulnerabilities": [
-    {
-      "type": "SQL Injection",
-      "severity": "CRITICAL",
-      "url": "https://example.com/login.php",
-      "parameter": "username",
-      "payload": "' UNION SELECT version()--",
-      "evidence": "MySQL 8.0.23",
-      "recommendation": "Use parameterized queries"
-    }
-  ]
-}
+### Core Architecture
+```
+Scanner Core
+├── Target Manager: Handles URL processing dan validation
+├── Payload Engine: Manages injection payloads dan patterns
+├── Threading Manager: Controls concurrent execution
+├── Response Analyzer: Processes server responses
+├── Detection Engine: Identifies vulnerabilities
+└── Report Generator: Creates formatted output
 ```
 
-### CSV Export
-Compatible with Excel dan database import untuk vulnerability management systems.
+### Detection Methodology
+
+1. **XSS Detection**:
+   - Inject script tags dan event handlers
+   - Monitor DOM manipulation responses
+   - Check reflected content dalam response
+
+2. **SQL Injection Detection**:
+   - Error-based detection melalui database error messages
+   - Boolean-based detection dengan logical queries
+   - Time-based detection untuk blind SQL injection
+
+3. **RCE Detection**:
+   - Command execution payload injection
+   - System command output analysis
+   - Process execution indicators
+
+4. **File Inclusion Detection**:
+   - Path traversal payload testing
+   - File content fingerprinting
+   - Directory listing detection
+
+### Performance Optimization Features
+
+- **Connection Reuse**: HTTP connection pooling untuk efficiency
+- **Request Batching**: Grouping requests untuk optimal throughput  
+- **Adaptive Delays**: Smart delay management untuk avoid rate limiting
+- **Memory Management**: Automatic garbage collection dan memory optimization
+- **Error Handling**: Robust error handling untuk stability
 
 ---
 
-## ⚡ PERFORMANCE OPTIMIZATION
+## 📊 Output dan Reporting
+
+### Console Output Format
+```
+[+] Target: https://example.com
+[+] Starting vulnerability scan...
+[!] CRITICAL: SQL Injection found at /login.php?user=
+[!] HIGH: XSS vulnerability detected at /search.php?q=
+[+] Scanning completed. Found 2 vulnerabilities.
+```
+
+### Detailed Results Table
+```
++------------------+----------+----------------------------+------------+
+| Vulnerability    | Severity | URL                        | Parameter  |
++------------------+----------+----------------------------+------------+
+| SQL Injection    | CRITICAL | /login.php                 | user       |
+| XSS              | HIGH     | /search.php                | q          |
+| Open Redirect    | MEDIUM   | /redirect.php              | url        |
++------------------+----------+----------------------------+------------+
+```
+
+### System Monitoring Display
+```
+System Information:
+- CPU Usage: 45%
+- Memory Usage: 2.1GB / 8GB
+- Active Threads: 856 / 1000
+- Network I/O: 15.2 MB/s
+- Scan Progress: 78% completed
+```
+
+---
+
+## ⚡ Optimasi Performa
 
 ### Threading Configuration
 ```python
-# Optimal thread count berdasarkan system specs
-LOW_END_DEVICE = 100    # Termux, single-core systems
-STANDARD_SYSTEM = 500   # Dual-core, 4GB RAM
-HIGH_END_SYSTEM = 1000  # Quad-core+, 8GB+ RAM
+# Konfigurasi thread berdasarkan spesifikasi sistem
+Low-end Device (Termux, 1-2 core): 100-200 threads
+Standard System (2-4 core, 4GB RAM): 500-700 threads  
+High-end System (4+ core, 8GB+ RAM): 800-1000 threads
 ```
 
 ### Memory Management
-- Dynamic payload loading untuk reduce memory footprint
-- Automatic garbage collection setelah setiap target
-- Connection pooling untuk efficient network usage
-- Response caching untuk duplicate request reduction
+- Dynamic memory allocation untuk payload processing
+- Automatic cleanup setelah setiap target completed
+- Garbage collection optimization untuk long-running scans
+- Buffer management untuk large response handling
 
 ### Network Optimization
-- Adaptive timeout berdasarkan network latency
+- Connection pooling dengan keep-alive support
 - Request queuing untuk prevent server overload
-- Exponential backoff untuk failed requests
+- Adaptive timeout berdasarkan network latency
 - DNS caching untuk faster hostname resolution
 
+### Performance Tuning Tips
+1. **Untuk Device Low-end**: Kurangi `MAX_THREADS` dalam script
+2. **Untuk Network Lambat**: Increase timeout value
+3. **Untuk Memory Terbatas**: Scan targets dalam batch kecil
+4. **Untuk Stealth Scanning**: Tambahkan delay antara requests
+
 ---
 
-## 🛡 SECURITY CONSIDERATIONS
+## 🛡 Keamanan dan Etika Penggunaan
 
-### Operational Security
-- **Anonymity**: Gunakan VPN atau Tor untuk scanning
-- **Traffic Encryption**: HTTPS-only untuk sensitive targets
-- **Log Management**: Secure deletion dari scan logs
-- **Credential Protection**: Jangan hardcode credentials dalam scripts
+### Prinsip Ethical Hacking
+1. **Authorization First**: Selalu dapatkan izin tertulis sebelum scanning
+2. **Scope Limitation**: Batasi scanning hanya pada target yang diauthorized
+3. **Data Protection**: Jangan eksploitasi atau download data sensitif
+4. **Responsible Disclosure**: Laporkan vulnerability ke pemilik sistem
 
 ### Legal Compliance
-- **Authorization Documentation**: Simpan written consent
-- **Scope Limitation**: Scanning hanya pada authorized targets
-- **Data Handling**: Proper handling dari sensitive data yang ditemukan
-- **Incident Response**: Protocol untuk handling critical vulnerabilities
+- **Indonesia**: UU ITE dan peraturan terkait cybersecurity
+- **International**: Computer Fraud dan Abuse Acts di berbagai negara
+- **Corporate**: Policy perusahaan tentang security testing
+- **Academic**: Guidelines institusi untuk research purposes
 
-### Detection Evasion
-- **User-Agent Rotation**: Randomized browser signatures
-- **Request Timing**: Variable delays antara requests
-- **Payload Obfuscation**: Encoded payloads untuk bypass WAF
-- **Distributed Scanning**: Multiple source IPs untuk large targets
+### Best Practices
+- Gunakan isolated environment untuk testing
+- Backup data sebelum testing production systems
+- Monitor system load selama scanning
+- Document semua aktivitas untuk audit trail
+- Coordinate dengan system administrators
+
+### Detection Avoidance (Ethical Use)
+- Randomized user agents untuk avoid basic detection
+- Request throttling untuk prevent DoS conditions
+- IP rotation jika diperlukan untuk large-scale testing
+- WAF evasion techniques untuk comprehensive testing
 
 ---
 
-## 🚨 TROUBLESHOOTING GUIDE
+## 🚨 Troubleshooting Guide
 
-### Common Issues & Solutions
+### Installation Issues
 
-#### Installation Problems
+#### Python Version Problems
 ```bash
-# SSL Certificate Issues
-pip install --trusted-host pypi.org --trusted-host pypi.python.org <package>
+# Cek Python version
+python --version
+python3 --version
 
-# Permission Denied
-sudo chown -R $USER:$USER /path/to/scanner/
-chmod +x scanner.py
+# Install Python 3.6+ jika belum ada
+# Ubuntu/Debian:
+sudo apt update && sudo apt install python3 python3-pip
 
-# Missing Dependencies
-pip install --upgrade -r requirements.txt --force-reinstall
+# CentOS/RHEL:
+sudo yum install python3 python3-pip
 ```
 
-#### Runtime Errors
+#### Dependencies Installation Failures
 ```bash
-# Connection Timeout
-python scanner.py -u <target> --timeout 30
+# SSL Certificate issues
+pip install --trusted-host pypi.org --trusted-host pypi.python.org requests
 
-# Memory Issues
-python scanner.py -u <target> --threads 100
+# Permission denied
+sudo pip install -r requirements.txt
 
-# SSL Verification Errors
-export PYTHONHTTPSVERIFY=0  # Use with caution
+# Specific module errors
+pip install beautifulsoup4 --upgrade --force-reinstall
 ```
 
-#### Performance Issues
+### Runtime Errors
+
+#### Connection Issues
 ```bash
-# Reduce thread count
-python scanner.py -u <target> --threads 50
+# Timeout errors
+python scanner.py -u <target>  # Check if target is accessible
 
-# Enable connection pooling
-export PYTHONUNBUFFERED=1
+# SSL verification errors  
+export PYTHONHTTPSVERIFY=0  # Disable SSL verification (use cautiously)
 
-# Monitor system resources
+# Network connectivity
+ping google.com  # Test internet connection
+```
+
+#### Memory Issues
+```bash
+# Reduce thread count dalam script
+MAX_THREADS = 100  # Instead of 1000
+
+# Monitor memory usage
 htop  # Linux
-Activity Monitor  # macOS
+top   # macOS/Linux
 Task Manager  # Windows
 ```
 
----
+#### Permission Issues
+```bash
+# File permission problems
+chmod +x scanner.py
+chown $USER:$USER scanner.py
 
-## 📈 ADVANCED FEATURES
-
-### Custom Payload Development
-```python
-# Add custom payloads in payloads.py
-CUSTOM_XSS = [
-    "<script>alert('Custom XSS')</script>",
-    "<img src=x onerror=alert('XSS')>",
-    # Add more payloads
-]
+# Directory access issues
+ls -la /path/to/scanner/
 ```
 
-### Plugin Architecture
-```python
-# Create custom detection plugins
-class CustomVulnDetector:
-    def detect(self, response):
-        # Custom detection logic
-        return vulnerability_found
-```
+### Performance Issues
 
-### Integration dengan CI/CD
-```yaml
-# GitHub Actions example
-- name: Security Scan
-  run: |
-    python scanner.py -u ${{ secrets.TARGET_URL }} \
-      --output security_report.json
-    
-- name: Upload Results
-  uses: actions/upload-artifact@v2
-  with:
-    name: security-report
-    path: security_report.json
-```
+#### Slow Scanning
+- Reduce thread count untuk stability
+- Check network bandwidth dan latency
+- Monitor CPU usage selama scanning
+- Close unnecessary applications
+
+#### High Memory Usage
+- Scan targets dalam smaller batches
+- Restart scanner setelah large scans
+- Monitor memory leaks dalam long-running scans
+
+#### Network Timeouts
+- Increase timeout values dalam script
+- Check target server responsiveness
+- Monitor network stability
 
 ---
 
-## 🤝 CONTRIBUTION GUIDELINES
+## 📚 Educational Resources
+
+### Recommended Learning Path
+1. **Web Security Fundamentals**: OWASP Top 10 vulnerabilities
+2. **Penetration Testing**: Metodologi dan tools
+3. **Network Security**: Understanding protocols dan traffic analysis
+4. **Secure Coding**: Best practices untuk developers
+
+### Practice Environments
+- **DVWA** (Damn Vulnerable Web Application): Basic vulnerability practice
+- **bWAPP**: Extensive vulnerability collection
+- **WebGoat**: OWASP educational platform  
+- **VulnHub**: Vulnerable virtual machines
+
+### Reference Materials
+- OWASP Testing Guide: Comprehensive web security testing methodology
+- PTES (Penetration Testing Execution Standard): Industry standard framework
+- NIST Cybersecurity Framework: Risk management guidelines
+- CVE Database: Common Vulnerabilities dan Exposures
+
+---
+
+## 🤝 Development dan Kontribusi
+
+### Project Structure
+```
+scanner/
+├── scanner.py          # Main scanner script
+├── requirements.txt    # Dependencies list
+├── payloads.py        # Vulnerability payloads
+├── utils.py           # Helper functions
+├── config.py          # Configuration settings
+└── README.md          # Documentation
+```
+
+### Contributing Guidelines
+1. **Fork Repository**: Create personal fork untuk development
+2. **Feature Branch**: Buat branch untuk setiap feature baru
+3. **Code Standards**: Follow PEP 8 untuk Python code style
+4. **Testing**: Test thoroughly sebelum submit pull request
+5. **Documentation**: Update README untuk changes yang significant
 
 ### Development Setup
 ```bash
-# Clone repository
+# Clone untuk development
 git clone https://github.com/HolyBytes/scanner.git
 cd scanner
 
 # Create development branch
-git checkout -b feature/new-vulnerability-check
+git checkout -b feature/new-detection-method
 
-# Install development dependencies
-pip install -r requirements-dev.txt
+# Make changes dan test
+python scanner.py -u https://testphp.vulnweb.com/
 
-# Run tests
-python -m pytest tests/
+# Commit changes
+git add .
+git commit -m "Add new vulnerability detection method"
+
+# Push dan create pull request
+git push origin feature/new-detection-method
 ```
 
-### Code Standards
-- **PEP 8** compliance untuk Python code
-- **Type hints** untuk function signatures
-- **Docstrings** untuk class dan method documentation
-- **Unit tests** untuk new features
-
-### Submission Process
-1. Fork repository dan create feature branch
-2. Implement changes dengan proper testing
-3. Update documentation dan README
-4. Submit pull request dengan detailed description
-5. Pass CI/CD checks dan code review
-
 ---
 
-## 📚 EDUCATIONAL RESOURCES
-
-### Recommended Reading
-- **OWASP Top 10**: Understanding common web vulnerabilities
-- **PTES**: Penetration Testing Execution Standard
-- **NIST Cybersecurity Framework**: Risk management guidelines
-- **CVE Database**: Common Vulnerabilities and Exposures
-
-### Training Materials
-- Hands-on labs dengan DVWA (Damn Vulnerable Web Application)
-- WebGoat security testing environment
-- PortSwigger Web Security Academy
-- OWASP WebSecurity Testing Guide
-
----
-
-## 📞 SUPPORT & CONTACT
+## 📞 Support dan Kontak
 
 ### Bug Reports
-Create detailed issue reports di GitHub repository dengan:
+Laporkan bugs melalui GitHub Issues dengan informasi:
 - Operating system dan Python version
-- Complete error messages dan stack traces
-- Steps to reproduce the issue
-- Expected vs actual behavior
+- Complete error message dan stack trace
+- Steps untuk reproduce the issue
+- Expected behavior vs actual behavior
 
 ### Feature Requests
-Submit enhancement proposals dengan:
-- Clear use case description
-- Technical implementation suggestions
-- Potential impact assessment
+Submit enhancement requests dengan detail:
+- Clear description dari requested feature
+- Use case scenarios
+- Potential implementation approach
+- Benefits untuk user community
 
-### Security Issues
-Untuk security vulnerabilities dalam tool:
-- **DO NOT** create public GitHub issues
-- Email security concerns ke: security@holybytes.dev
-- Use PGP encryption untuk sensitive communications
+### Contact Information
+- **GitHub**: [@HolyBytes](https://github.com/HolyBytes)
+- **Support**: [https://saweria.co/HolyBytes](https://saweria.co/HolyBytes)
+- **Email**: Gunakan GitHub Issues untuk komunikasi publik
+
+### Community
+- Join discussions dalam GitHub repository
+- Share experiences dan best practices
+- Contribute improvements dan bug fixes
+- Help other users dalam troubleshooting
 
 ---
 
-## 📄 LICENSE & LEGAL
+## 📄 Lisensi
 
 ### MIT License
 ```
+MIT License
+
 Copyright (c) 2025 HolyBytes
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -512,50 +587,51 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-### Terms of Use
-By using this software, you agree to:
-- Use tool hanya untuk authorized security testing
-- Respect privacy dan intellectual property rights
-- Comply dengan applicable laws dan regulations
-- Indemnify developers dari any misuse consequences
-
 ---
 
-## 🏆 ACKNOWLEDGMENTS
+## 🏆 Acknowledgments
 
-### Contributors
+### Pengembangan
 - **Lead Developer**: Ade Pratama (@HolyBytes)
-- **Security Researchers**: Indonesian Cybersecurity Community
-- **Beta Testers**: Penetration Testing professionals worldwide
+- **Indonesian Cybersecurity Community**: Input dan feedback berharga
+- **Beta Testers**: Security professionals yang membantu testing
 
-### Special Thanks
-- OWASP Foundation untuk vulnerability research
-- Security community untuk responsible disclosure practices
-- Open source projects yang menjadi foundation dari tool ini
+### Referensi
+- **OWASP Foundation**: Vulnerability research dan classification
+- **Security Research Community**: Payload development dan detection methods
+- **Open Source Projects**: Libraries dan frameworks yang digunakan
 
 ---
 
-## 🌟 PROJECT ROADMAP
+## 🌟 Roadmap Pengembangan
+
+### Version 1.5 (Current)
+- ✅ 15+ vulnerability types detection
+- ✅ Multi-threading support (1000 threads)
+- ✅ Cross-platform compatibility
+- ✅ Professional reporting format
 
 ### Version 2.0 (Planned)
-- [ ] Machine Learning-based false positive reduction
-- [ ] Advanced WAF bypass capabilities
-- [ ] Real-time collaborative scanning
-- [ ] Enterprise dashboard integration
-- [ ] API fuzzing capabilities
+- [ ] GUI interface untuk easier usage
+- [ ] Advanced WAF bypass techniques
+- [ ] Custom payload editor
+- [ ] Automated report generation (PDF/HTML)
+- [ ] Integration dengan popular security tools
 
 ### Version 2.5 (Future)
-- [ ] Mobile application security testing
-- [ ] Cloud infrastructure scanning
-- [ ] IoT device vulnerability assessment
-- [ ] Blockchain smart contract analysis
+- [ ] Machine learning untuk false positive reduction
+- [ ] Cloud-based scanning capabilities
+- [ ] Real-time collaboration features
+- [ ] Mobile app security testing
 
 ---
 
-**Professional security testing tool developed by Indonesian cybersecurity experts for the global security community. Use responsibly and ethically.**
+**Professional vulnerability scanner developed by Indonesian cybersecurity experts. Digunakan oleh security professionals, researchers, dan students untuk authorized security testing dan educational purposes.**
+
+*Gunakan dengan bijak, bertanggung jawab, dan selalu patuhi hukum yang berlaku.*
 
 ---
 
-[![GitHub](https://img.shields.io/badge/GitHub-HolyBytes-black?style=flat-square&logo=github)](https://github.com/HolyBytes)
-[![Saweria](https://img.shields.io/badge/Support-Saweria-orange?style=flat-square)](https://saweria.co/HolyBytes)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/HolyBytes/scanner?style=social)](https://github.com/HolyBytes/scanner)
+[![Follow on GitHub](https://img.shields.io/github/followers/HolyBytes?style=social)](https://github.com/HolyBytes)
+[![Support](https://img.shields.io/badge/Support-Saweria-orange)](https://saweria.co/HolyBytes)
